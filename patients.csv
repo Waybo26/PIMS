@@ -1,0 +1,6 @@
+PatientID,Name,DOB,Diagnosis,IsCritical,Balance,Prescription,Allergy
+1,John Doe,1985-04-12,Hypertension,False,150.00,Lisinopril,Penicillin
+2,Jane Smith,1990-08-25,Asthma,True,500.50,Albuterol,Peanuts
+3,Alice Johnson,1978-11-03,Diabetes,False,200.00,Insulin,Sulfa
+4,Bob Brown,2001-02-14,COVID-19,True,1200.00,Paxlovid,None
+5,Charlie Davis,1965-09-30,Heart Failure,True,3400.00,Metoprolol,Aspirin
