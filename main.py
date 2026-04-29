@@ -1,6 +1,6 @@
 from models import Patient, MedicalRecord
 from data_manager import load_patient_data, get_critical_patients
-from analytics import plot_hospital_capacity
+from hospital_analytics import plot_hospital_capacity
 from datetime import datetime
 
 def validate_dob(dob_string: str) -> bool:
