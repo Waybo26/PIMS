@@ -8,14 +8,11 @@ def flatten_charges(charges):
     This function is used to flatten nested charge lists into a single list by using recursion
     '''
     flat = []
-    try:
-        for item in charges:
-            if type(item) == list:
-                flat = flat + flatten_charges(item) #recursion is used to concatenate nested lists
-            else:
-                flat = flat + [item]
-    except TypeError:
-        return [lst] #exception handling used to ensure any object passed is a list
+    for item in charges:
+        if type(item) == list:
+            flat = flat + flatten_charges(item) #recursion is used to concatenate nested lists
+        else:
+            flat = flat + [item]
     return flat
 
 
@@ -39,13 +36,12 @@ def generate_invoice(patient):
 
 ############ double check ##############
     insurance_coverage = random.uniform(0.5, 0.9) # 50%-90%
-    covered_amt = total_cost + insurance_coverage
+    covered_amt = total_cost * insurance_coverage
     amt_due  = total_cost - covered_amt
     conflicts = check_allergy_conflicts(patient.record)
 
 ############ double check ##############
-    invoice = f""" 
-    Invoice:
+    invoice = f"""Invoice:
     Patient: {patient.name}
     Total Cost: ${total_cost:.2f}
     Insurance Covered: ${covered_amt:.2f}
