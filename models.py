@@ -8,6 +8,8 @@ class MedicalRecord:
         self.allergies = set()
         
     def add_prescription(self, medication: str):
+        """ This method aids in adding to the medical record of a patient by 
+        adding the patient's prescription data to their profile"""
         if medication in self.allergies:
             return f"WARNING: Allergic to {medication}!"
         self.prescriptions.add(medication)
@@ -26,7 +28,8 @@ class Patient:
         self.record = record
         
     def __str__(self):
-        return f"Patient {self.patient_id}: {self.name} (DOB: {self.dob}) - Diagnosis: {self.diagnosis}"
+        """Returns a formatted string representation of the patients"""
+        return f"Patient {self.patient_id}: {self.name} (DOB: {self.dob}) - Diagnosis: {self.record.diagnosis}"
 
     def __eq__(self, other):
         """Checks equality based on Patient ID."""

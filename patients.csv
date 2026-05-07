@@ -1,6 +1,17 @@
+<<<<<<< Updated upstream
 PatientID,Name,DOB,Diagnosis,IsCritical,Balance,Prescription,Allergy,Invoice
 1,John Doe,4/12/85,Hypertension,FALSE,150,Lisinopril,Penicillin,
 2,Jane Smith,8/25/90,Asthma,TRUE,500.5,Albuterol,Peanuts,
 3,Alice Johnson,11/3/78,Diabetes,FALSE,200,Insulin,Sulfa,
 4,Bob Brown,2/14/01,COVID-19,TRUE,1200,Paxlovid,None,
 5,Charlie Davis,9/30/65,Heart Failure,TRUE,3400,Metoprolol,Aspirin,
+=======
+PatientID,Name,DOB,Diagnosis,IsCritical,Balance,Prescription,Allergy,Invoice
+1,John Doe,4/12/85,Hypertension,False,150.0,Lisinopril,Penicillin,
+2,Jane Smith,8/25/90,Asthma,True,500.5,Albuterol,Peanuts,
+3,Alice Johnson,11/3/78,Diabetes,False,200.0,Insulin,Sulfa,
+4,Bob Brown,2/14/01,COVID-19,True,1200.0,Paxlovid,,
+5,Charlie Davis,9/30/65,Heart Failure,True,3400.0,Metoprolol,Aspirin,
+6,Bao,2002-10-27,Cold,False,0.0,,,57.89570349496509
+7,Leland,2006-05-26,Cough,False,0.0,,,65.73744445800982
+>>>>>>> Stashed changes
