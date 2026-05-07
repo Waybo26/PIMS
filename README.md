@@ -53,7 +53,7 @@ Run the main script:
 Run the tests:
 `pytest test_system.py`
 
-#i# Main contributions of each team member
+## Main contributions of each team member
 
 This project was originally created with the intention of being completed by a three member team, however, one of the team members had to leave the class. Therefore, the work for this project was distributed as follows:
 
