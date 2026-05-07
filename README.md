@@ -45,6 +45,7 @@ Project/
 - pandas
 - matplotlib
 - pytest
+- pandas
 
 ### Execution Instructions
 Run the main script:
