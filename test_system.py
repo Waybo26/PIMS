@@ -1,5 +1,5 @@
 import pytest
-from main import validate_dob
+from data_manager import validate_dob
 from models import Patient, MedicalRecord
 from billing import generate_invoice
 

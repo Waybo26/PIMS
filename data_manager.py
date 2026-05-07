@@ -1,7 +1,33 @@
 import pandas as pd
 from models import Patient, MedicalRecord
+from datetime import datetime
 
-def load_patient_data(filepath: str) -> list:
+def validate_dob(dob_string):
+    '''
+    Validates Date of Birth format to ensure it's not in the future.
+    '''
+    try:
+        valid_date = datetime.strptime(dob_string, "%Y-%m-%d")
+        if valid_date > datetime.now():
+            raise ValueError("DOB cannot be in the future.")
+        return True
+    except ValueError as e:
+        print(f"Invalid DOB Input: {e}")
+        return False
+
+def validate_name(name):
+    '''
+    Validates name to ensure it's not empty and contains only letters and spaces.
+    '''
+    if not name.strip():
+        print("Invalid Name Input: Name cannot be empty.")
+        return False
+    if not all(x.isalpha() or x.isspace() for x in name):
+        print("Invalid Name Input: Name must contain only letters and spaces.")
+        return False
+    return True
+
+def load_patient_data(filepath):
     """Loads raw patient data using Pandas."""
     try:
         df = pd.read_csv(filepath)
@@ -20,7 +46,7 @@ def load_patient_data(filepath: str) -> list:
         print(f"Error loading data: {e}")
         return []
 
-def get_critical_patients(patients: list) -> list:
+def get_critical_patients(patients):
     """List comprehension to filter critical patients."""
     return [p for p in patients if p.is_critical]
 
@@ -33,11 +59,11 @@ def save_patient_data(filepath: str, patients: list):
                 'PatientID': p.patient_id,
                 'Name': p.name,
                 'DOB': p.dob,
-                'Diagnosis': p.medical_record.diagnosis,
-                'IsCritical': p.medical_record.is_critical,
-                'Balance': p.medical_record.balance,
-                'Prescription': ', '.join(p.medical_record.prescriptions) if p.medical_record.prescriptions else None,
-                'Allergy': ', '.join(p.medical_record.allergies) if p.medical_record.allergies else None
+                'Diagnosis': p.record.diagnosis,
+                'IsCritical': p.record.is_critical,
+                'Balance': p.record.balance,
+                'Prescription': ', '.join(p.record.prescriptions) if p.record.prescriptions else None,
+                'Allergy': ', '.join(p.record.allergies) if p.record.allergies else None
             })
         df = pd.DataFrame(data)
         df.to_csv(filepath, index=False)

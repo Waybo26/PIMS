@@ -20,7 +20,6 @@ def check_allergy_conflicts(record):
     '''
     This function uses set intersection to check if prescription conflict with allergies
     '''
-############ double check ##############
     return record.prescriptions.intersection(record.allergies)
 
 
@@ -39,13 +38,11 @@ def generate_invoice(patient, existing_invoice=None):
     flat_charges = flatten_charges(charges)
     total_cost = sum(flat_charges)
 
-############ double check ##############
     insurance_coverage = random.uniform(0.5, 0.9) # 50%-90%
     covered_amt = total_cost * insurance_coverage
     amt_due  = total_cost - covered_amt
     conflicts = check_allergy_conflicts(patient.record)
 
-############ double check ##############
     invoice = f"""Invoice:
     Patient: {patient.name}
     Total Cost: ${total_cost:.2f}
