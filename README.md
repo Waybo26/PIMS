@@ -49,7 +49,8 @@ Project/
 
 ### Execution Instructions
 Run the main script:
-`python main.ipynb`
+- go to main.ipynb (jupyter notebook) and click `run all`
+(if there are issues with running, close out of notebook then reopen and click `restart` before running again)
 
 Run the tests:
 `pytest test_system.py`

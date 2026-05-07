@@ -34,7 +34,7 @@ def generate_invoice(patient, existing_invoice=None):
     """ 
         return invoice, float(existing_invoice)
 
-    charges = [patient.record.balance, [50, 100], 25]
+    charges = [patient.record.balance, [50, 100], 25] # every patient has a base charge plus some random additional charges
     flat_charges = flatten_charges(charges)
     total_cost = sum(flat_charges)
 

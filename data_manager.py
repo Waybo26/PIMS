@@ -2,6 +2,7 @@ import pandas as pd
 from models import Patient, MedicalRecord
 from datetime import datetime
 
+# validation functions
 def validate_dob(dob_string):
     '''
     Validates Date of Birth format to ensure it's not in the future.
@@ -27,6 +28,7 @@ def validate_name(name):
         return False
     return True
 
+# data loading/saving 
 def load_patient_data(filepath):
     """Loads raw patient data using Pandas."""
     try:
