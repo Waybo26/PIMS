@@ -53,7 +53,7 @@ Run the main script:
 (if there are issues with running, close out of notebook then reopen and click `restart` before running again)
 
 Run the tests:
-`pytest test_system.py`
+- `pytest test_system.py` (your system may need python/python3 in front of command)
 
 ## Main contributions of each team member
 
