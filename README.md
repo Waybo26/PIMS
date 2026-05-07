@@ -24,17 +24,17 @@ These must be installed on your laptop for this project to be successfully run
 
 ### File/Module Structure
 
-Project
-|
-|--- main.ipynb                 # Main program entry point in Jupyter Notebook
-|--- patients.csv               # Dataset with sample patient data
-|
-|--- models.py                  # Contains Patient and MedicalRecord classes
-|--- data_manager.py            # Functions for loading CSV data and filtering
-|--- hospital_analytics.py      # Plotting function for hospital capacity chart
-|--- billing.py                 # Invoice generation, charge flattening, allergy conflict checking
-|
-|--- test_system.py             # Pytest cases for DOB validation, patient equality, and billing
+```text
+Project/
+├── main.ipynb                 # Main program entry point in Jupyter Notebook
+├── patients.csv               # Dataset with sample patient data
+├── models.py                  # Contains Patient and MedicalRecord classes
+├── data_manager.py            # Functions for loading CSV data and filtering
+├── hospital_analytics.py      # Plotting function for hospital capacity chart
+├── billing.py                 # Invoice generation, charge flattening, allergy conflict checking
+├── analytics_reports/         # Generated PDF/PNG reports (Auto-created)
+└── test_system.py             # Pytest cases for DOB validation, patient equality, and billing
+```
 
 
 
@@ -61,7 +61,7 @@ Wes:
 - started main notebook file, main.ipnyb
 - created models.py 
 - created test_system.py
-- 
+- ensured test validation
 
 
 Bao-Chau:
@@ -69,8 +69,3 @@ Bao-Chau:
 - created data_manager.py
 - created patients.csv
 - created billing.py 
-
-Documentation & Presentation (15 points)
-README file with setup instructions (5 points). Users should be able to run the project easily by following the provided README file.
-Explanation of problem and solution approach (5 points). The submission should explain what problem is being solved and how the program addresses it.
-Proper file submission (all needed files included and organized) (5 points). All files must be complete, well-named, and organized so the graders can run and review the project without difficulty.
